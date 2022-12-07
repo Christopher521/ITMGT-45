@@ -43,13 +43,13 @@ def relationship_status(from_member, to_member, social_graph):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
     if to_member in social_graph[from_member]['following'] and from_member in social_graph[to_member]['following']:
-        status = "friends | " + from_member + " is friends with " + to_member
+        status = "friends"
     elif to_member in social_graph[from_member]['following']:
-        status = "follower | " + to_member + " is " + from_member + "'s follower"
+        status = "follower"
     elif from_member in social_graph[to_member]['following']:
-        status = "followed by | " + to_member + " is followed by " + from_member
+        status = "followed by"
     else:
-        status= "no relationship | " + "there is no relationship between " + to_member + " & " + from_member
+        status= "no relationship"
     return status
 
 
